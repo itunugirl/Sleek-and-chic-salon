@@ -2,7 +2,6 @@
 
 import React from 'react';
 import Link from 'next/link'; // Correct import path for Link
-import Image from 'next/image'; // Import Image from Next.js for optimized image handling
 
 const ServicePageSection: React.FC = () => {
   const services = [
@@ -42,7 +41,7 @@ const ServicePageSection: React.FC = () => {
     <section className="bg-section2Bg w-screen py-8">
       <div className="w-[90vw] mx-auto">
         {/* Our Services Heading */}
-        <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-center text-gray-800 mb-12">
+        <h2 className="text-base md:text-xl sm:text-sm lg:text-lg xl:text-xl font-bold text-center text-gray-800 mb-12">
           Our Services
         </h2>
 
@@ -54,12 +53,10 @@ const ServicePageSection: React.FC = () => {
               className="bg-white shadow-md rounded-lg overflow-hidden transition-transform duration-300 transform hover:scale-105"
             >
               {/* Service Image */}
-              <div className="w-full h-60 md:h-72 lg:h-80 relative">
-                <Image
+              <div className="w-full h-60 md:h-72 lg:h-80">
+                <img
                   src={service.imageUrl}
                   alt={service.title}
-                  layout="fill"
-                  objectFit="cover"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -71,10 +68,8 @@ const ServicePageSection: React.FC = () => {
                 <p className="text-gray-600 text-center mb-4">{service.description}</p>
 
                 {/* BOOK NOW Button */}
-                <Link href="/book">
-                  <a className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-md transition-all duration-300">
-                    BOOK NOW
-                  </a>
+                <Link href="/book" className="custom-btn">
+                  BOOK NOW
                 </Link>
               </div>
             </div>
