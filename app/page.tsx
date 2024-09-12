@@ -1,113 +1,186 @@
-import Image from "next/image";
+import React from 'react';
+import Link from 'next/link';
 
-export default function Home() {
+const HomepageSection: React.FC = () => {
+    const services = [
+        {
+          imageUrl: 'https://i.postimg.cc/vZ72wM5X/IMG-4439.jpg',
+          title: 'Hair Styling',
+          description: 'Expert haircuts, styling, and treatments to elevate your look and boost your confidence.',
+        },
+        {
+          imageUrl: 'https://i.postimg.cc/vmBKrk6z/facial.webp',
+          title: 'Facial Treatments',
+          description: 'Rejuvenating facial treatments that leave your skin feeling refreshed and glowing.',
+        },
+        {
+          imageUrl: 'https://i.postimg.cc/Y9CsxVGR/IMG-4440-removebg-preview.png',
+          title: 'Wig Installation',
+          description: 'Professional wig installation services for a seamless and natural look.',
+        },
+        {
+          imageUrl: 'https://i.postimg.cc/tCFGJKhn/IMG-4428.jpg',
+          title: 'Nail Tech',
+          description: 'Professional nail services that offer artistic nail designs, manicures, and pedicures.',
+        },
+        {
+          imageUrl: 'https://i.postimg.cc/j2NmWfJY/pedicure-2.webp',
+          title: 'Pedicure & Manicure',
+          description: 'Complete hand and foot care to ensure your nails and skin are healthy and beautiful.',
+        },
+        {
+          imageUrl: 'https://i.postimg.cc/hjYp1Gq4/IMG-4437.jpg',
+          title: 'Hair Weaving',
+          description: 'High-quality hair extensions and weaving techniques to give you a fuller, natural look.',
+        },
+      ];
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div>
+      {/* First Section */}
+      <section className="bg-customBackground w-screen py-8">
+        <div
+          className="relative w-[90vw] bg-cover bg-center mx-auto rounded-lg shadow-md"
+          style={{ backgroundImage: "url('https://i.postimg.cc/2jMDBByr/modern-hair-beauty-salon-with-dark-design-luxury-barbershop-interior-generative-ai-inside-empty-barb.avif')" }}
+        >
+          <div className="flex items-center justify-center h-[400px] md:h-[500px] lg:h-[600px] mx-auto p-4">
+            {/* Overlay and Heading */}
+            <div className="bg-white bg-opacity-70 p-6 rounded-lg text-center">
+              <h1 className="text-bookNowButton font-sevillana text-lg md:text-2xl lg:text-3xl font-bold">
+                Elevating Your Look with Precision, Style, and Care – Where Every Detail Shines
+              </h1>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
+      {/* Second Section */}
+      <section className="bg-section2Bg w-screen py-8">
+        <div className="w-[90vw] mx-auto">
+          {/* Our Services Heading */}
+          <h2 className="text-base md:text-xl sm:text-sm lg:text-lg xl-text-xl font-bold text-center text-gray-800 mb-12">
+            Our Services
           </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+          {/* Services Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {services.map((service, index) => (
+              <div
+                key={index}
+                className="bg-white shadow-md rounded-lg overflow-hidden transform transition duration-300 hover:scale-105"
+              >
+                {/* Service Image */}
+                <div className="w-full h-60 md:h-72 lg:h-80">
+                  <img
+                    src={service.imageUrl}
+                    alt={service.title}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                {/* Service Writeup */}
+                <div className="p-4">
+                  <h3 className="text-lg font-bold text-gray-800 mb-2">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-600">{service.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+      {/* New Title for Returning User / Appointment Section */}
+      <section className="bg-white w-screen py-8">
+        <h2 className="text-2xl font-bold text-center text-gray-800 mb-8">
+          Manage Your Appointments
+        </h2>
+        <div className="max-w-[90vw] mx-auto space-y-6">
+          {/* Returning User / Login */}
+          <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
+            <h2 className="text-xl font-bold text-gray-800 mb-3">Returning User?</h2>
+            <p className="text-gray-600">
+              If you already have an account, you can <Link href="/login" className="text-blue-600 hover:underline">log in here</Link> to access your previous appointments and book a new one.
+            </p>
+          </div>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+          {/* Appointment Process */}
+          <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {/* Appointment Write-Up */}
+              <div className="space-y-4">
+                <h2 className="text-lg font-bold text-gray-800">Schedule Your Appointment</h2>
+                <p className="text-gray-600">
+                  Book your appointment with ease by following our simple process. Choose from a range of services and proceed with a few easy steps to secure your spot.
+                </p>
+                <p className="text-gray-600">
+                  Whether you're opting for a basic haircut or a luxurious treatment, we’re here to make sure you leave feeling refreshed and satisfied.
+                </p>
+              </div>
+
+              {/* Service Options */}
+              <div className="space-y-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-3">Choose Appointment</h2>
+                <div className="space-y-4">
+                  {/* Basic Services */}
+                  <div className="bg-gray-50 p-4 rounded-lg shadow-md">
+                    <h3 className="text-lg font-bold text-gray-800 mb-2">Basic Services</h3>
+                    <p className="text-gray-600 mb-2">
+                      Choose from our range of basic services including haircuts, facials, and more.
+                    </p>
+                    <Link
+                  href="/book"
+                  className="bg-bookNowButton w-btn-wide text-white text-base py-3 px-4 rounded-custom flex items-center justify-center hover:bg-green-800 transition"
+                >
+               BOOK NOW
+                </Link>
+                  </div>
+
+                  {/* Advanced Services */}
+                  <div className="bg-gray-50 p-4 rounded-lg shadow-md">
+                    <h3 className="text-lg font-bold text-gray-800 mb-2">Advanced Services</h3>
+                    <p className="text-gray-600 mb-2">
+                      Explore our advanced services for a more luxurious experience.
+                    </p>
+                    <Link
+                  href="/book"
+                  className="bg-bookNowButton w-btn-wide text-white text-base py-3 px-4 rounded-custom flex items-center justify-center hover:bg-green-800 transition"
+                >
+               BOOK NOW
+                </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Appointment Process Steps */}
+          <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
+            <h2 className="text-xl font-bold text-gray-800 mb-4">Appointment Process</h2>
+            <div className="space-y-4">
+              {/* Step 1 */}
+              <div className="bg-gray-50 p-4 rounded-lg shadow-md">
+                <h3 className="text-lg font-bold text-gray-800 mb-2">Step 1: Choose Appointment</h3>
+                <p className="text-gray-600">Select your desired service and click "Book Now" to proceed.</p>
+              </div>
+
+              {/* Step 2 */}
+              <div className="bg-gray-50 p-4 rounded-lg shadow-md">
+                <h3 className="text-lg font-bold text-gray-800 mb-2">Step 2: Your Information</h3>
+                <p className="text-gray-600">Provide your personal information to complete your booking.</p>
+              </div>
+
+              {/* Step 3 */}
+              <div className="bg-gray-50 p-4 rounded-lg shadow-md">
+                <h3 className="text-lg font-bold text-gray-800 mb-2">Step 3: Confirmation</h3>
+                <p className="text-gray-600">You'll receive a confirmation email with your appointment details.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   );
-}
+};
+
+export default HomepageSection;
