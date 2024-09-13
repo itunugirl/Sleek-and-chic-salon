@@ -68,7 +68,7 @@ const ServicePageSection: React.FC = () => {
                 <p className="text-gray-600 text-center mb-4">{service.description}</p>
 
                 {/* BOOK NOW Button */}
-                <Link href="/book" className="custom-btn">
+                <Link href="/app/book" className={"custom-btn"}>
                   BOOK NOW
                 </Link>
               </div>

@@ -88,7 +88,7 @@ const Navbar: React.FC = () => {
           <Link href="#contacts" className="block px-4 py-2 text-navText hover:bg-gray-100 transition" onClick={toggleMenu}>
             Contacts
           </Link>
-          <Link href="#book" className="block px-6 py-3 w-btn-wide text-white bg-black rounded-custom items-center justify-center hover:bg-green-800 transition" onClick={toggleMenu}>
+          <Link href="/book" className="block px-6 py-3 w-btn-wide text-white bg-black rounded-custom items-center justify-center hover:bg-green-800 transition" onClick={toggleMenu}>
             Book Now
           </Link>
         </div>
