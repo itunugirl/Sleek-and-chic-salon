@@ -21,11 +21,26 @@ const config: Config = {
       base: ['16px', '24px'],
       lg: ['19px', '25px'],
       xl: ['24px', '32px'],
-    
-
+      
     },
     extend: {
+      colors: {
+        orderbg: '#1b2f4f',
+        appointBackground: '#f0e4d7',
+        cream: '#fdf5e6',
+        customBackground: '#3b3b3b',
+        navText: '#ffffff',
+        bookNowButton: '#212e21',
+        stone600: '#4b5563',  // Tailwind CSS color for bg-stone-600
+        black: '#000000',
+        white: '#ffffff',
+        section2Bg: '#d9d4d4',
+        chocolate: '#797979',
+        lightchocolate: '#A1A1A1',
+        greenGradient: 'linear-gradient(to right, #06b6d4, #3b82f6)',
+      },
       backgroundImage: {
+        darkGradient: 'gradient-to-r from-gray-100 to-gray-200)',
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
@@ -34,15 +49,6 @@ const config: Config = {
         ebGaramond: ['EB Garamond', 'serif'],
         protestGuerrilla: ['Protest Guerrilla', 'sans-serif'],
         sevillana: ['Sevillana', 'serif'],
-      },
-      colors: {
-        customBackground: '#3b3b3b',
-        navText: '#ffffff',
-        bookNowButton: '#212e21',
-        stone600: '#4b5563',  // Tailwind CSS color for bg-stone-600
-        black: '#000000',
-        white: '#ffffff',
-        section2Bg: '#d9d4d4',
       },
       width: {
         'btn-wide': '150px',  // Custom button width

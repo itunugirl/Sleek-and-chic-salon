@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '@components/navbar'; // Adjust the import path as needed
 import Head from 'next/head'; // Importing Next.js Head component
 import "./globals.css";
+import Footer from '@components/footer';
 
 export const metadata = {
   title: 'Sleek and Chic Unisex Salon',
@@ -29,6 +30,7 @@ export default function RootLayout({
         
         {/* Page content */}
         <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );

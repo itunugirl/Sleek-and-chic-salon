@@ -1,7 +1,8 @@
 "use client"; // Ensure this is at the very top of the file
 
 import React from 'react';
-import Link from 'next/link'; // Correct import path for Link
+import Link from 'next/link';
+import Image from 'next/image';
 
 const ServicePageSection: React.FC = () => {
   const services = [
@@ -38,10 +39,20 @@ const ServicePageSection: React.FC = () => {
   ];
 
   return (
-    <section className="bg-section2Bg w-screen py-8">
-      <div className="w-[90vw] mx-auto">
+    <section className="bg-appointBackground font-ebGaramond py-8 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 w-screen">
+      <div className="w-[90vw] mx-auto text-center mb-10">
+        {/* Write-Up Section */}
+        <div className="mb-10">
+          <h2 className="text-lg md:text-xl sm:text-lg lg:text-lg xl:text-xl font-bold text-center text-gray-800 mb-4">
+            Discover Our Expert Services
+          </h2>
+          <p className="text-gray-600 text-center mb-8">
+            At our salon, we are committed to providing exceptional beauty services tailored to meet your individual needs. Our talented professionals are here to ensure you look and feel your best. From stunning hair transformations to revitalizing skincare, we offer a wide range of services designed to enhance your natural beauty. Experience a welcoming environment and leave feeling refreshed and renewed.
+          </p>
+        </div>
+
         {/* Our Services Heading */}
-        <h2 className="text-base md:text-xl sm:text-sm lg:text-lg xl:text-xl font-bold text-center text-gray-800 mb-12">
+        <h2 className="text-lg md:text-xl sm:text-lg lg:text-lg xl:text-xl font-bold text-center text-gray-800 mb-12">
           Our Services
         </h2>
 
@@ -54,22 +65,26 @@ const ServicePageSection: React.FC = () => {
             >
               {/* Service Image */}
               <div className="w-full h-60 md:h-72 lg:h-80">
-                <img
+                <Image
                   src={service.imageUrl}
                   alt={service.title}
+                  width={500} // Specify width
+                  height={400} // Specify height
                   className="w-full h-full object-cover"
                 />
               </div>
               {/* Service Writeup */}
               <div className="p-4 flex flex-col items-center">
-                <h3 className="text-lg font-bold text-gray-800 mb-2 text-center">
+                <h3 className="text-base lg:text-lg xl:text-xl md:text-md sm:text-sm font-bold text-gray-800 mb-2 text-center">
                   {service.title}
                 </h3>
                 <p className="text-gray-600 text-center mb-4">{service.description}</p>
 
-                {/* BOOK NOW Button */}
-                <Link href="/app/book" className={"custom-btn"}>
-                  BOOK NOW
+                {/* Centering the BOOK NOW Button */}
+                <Link href="/app/book">
+                  <button className="custom-btn">
+                    BOOK NOW
+                  </button>
                 </Link>
               </div>
             </div>

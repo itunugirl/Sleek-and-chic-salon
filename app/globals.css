@@ -1,5 +1,5 @@
 /* Import fonts from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400;1,700&family=Oswald:wght@200;300;400;500;600;700&family=Protest+Guerrilla&family=Sevillana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400;1,700&family=Oswald:wght@200;300;400;500;600;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Protest+Guerrilla&family=Sevillana&display=swap');
 
 /* Import Tailwind CSS directives */
 @tailwind base;
@@ -15,17 +15,15 @@
 
 /* Global Font Family */
 body {
-  font-family: 'Oswald', 'EB Garamo', 'Protest Guerrilla', 'Sevillana', sans-serif;
-  margin: 0;
-  padding: 0;
+  font-family: 'Oswald', 'EB Garamond', 'Montserrat', 'Protest Guerrilla', 'Sevillana', sans-serif; /* Corrected font names */
   min-height: 100vh;
   overflow: auto;
   position: relative;
 }
-html, body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden; /* Prevent horizontal scroll */
+
+/* Prevent horizontal scroll */
+html {
+  overflow-x: hidden;
 }
 
 /* Main Content */
@@ -33,9 +31,17 @@ main {
   @apply flex justify-center;
   width: 100vw;
   min-height: 100vh;
-  pointer-events: none;
   flex: 1;
 }
-.custom-btn{
-  @apply bg-bookNowButton w-btn-wide text-white text-base py-3 px-4 rounded-custom flex items-center justify-center hover:bg-green-800 transition
+
+@layer components {
+  .custom-btn {
+    @apply bg-bookNowButton w-btn-wide text-white text-base py-3 px-4 rounded-custom flex items-center justify-center hover:bg-green-800 transition;
+  }
+  .signup-btn {
+    @apply bg-black w-btn-wide text-[gold] text-base py-3 px-4 flex items-center justify-center hover:bg-[gold] hover:text-black transition;
+  }
+  .learnmore-btn {
+    @apply bg-chocolate w-btn-wide text-white text-base py-3 px-4 flex items-center justify-center hover:bg-lightchocolate hover:text-white transition;
+  }
 }
