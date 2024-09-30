@@ -124,7 +124,7 @@ const HomepageSection: React.FC = () => {
                         <div className="flex items-center justify-center h-[400px] md:h-[500px] lg:h-[600px] mx-auto p-4">
                             {/* Overlay and Heading */}
                             <div className="bg-white bg-opacity-70 p-6 rounded-lg text-center">
-                                <h1 className="text-bookNowButton font-sevillana text-lg md:text-2xl lg:text-3xl font-bold">
+                                <h1 className="text-bookNowButton font-Edu QLD Beginner text-lg md:text-2xl lg:text-3xl font-bold">
                                     Elevating Your Look with Precision, Style, and Care – Where Every Detail Shines
                                 </h1>
                             </div>

@@ -1,4 +1,4 @@
-"use client"; // Ensure this is at the very top of the file
+'use client'
 
 import React from 'react';
 import Image from 'next/image';
@@ -33,7 +33,7 @@ const AboutPage: React.FC = () => {
   ];
 
   return (
-    <div className="font-sevillana bg-gray-50 py-8 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
+    <div className="font-sevillana bg-section2Bg w-screen py-8 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
       <div className="max-w-5xl mx-auto text-center mb-10">
         <h1 className="text-xl lg:text-lg xl:text-xl md:text-base font-bold text-gray-800 mb-4">About Us</h1>
         <p className="text-gray-600 mb-6 text-lg">

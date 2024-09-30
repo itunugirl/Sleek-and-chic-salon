@@ -43,7 +43,7 @@ const ServicePageSection: React.FC = () => {
       <div className="w-[90vw] mx-auto text-center mb-10">
         {/* Write-Up Section */}
         <div className="mb-10">
-          <h2 className="text-lg md:text-xl sm:text-lg lg:text-lg xl:text-xl font-bold text-center text-gray-800 mb-4">
+          <h2 className="text-lg md:text-xl sm:text-lg lg:text-lg xl:text-xl font-bold text-gray-800 mb-4">
             Discover Our Expert Services
           </h2>
           <p className="text-gray-600 text-center mb-8">
@@ -52,43 +52,71 @@ const ServicePageSection: React.FC = () => {
         </div>
 
         {/* Our Services Heading */}
-        <h2 className="text-lg md:text-xl sm:text-lg lg:text-lg xl:text-xl font-bold text-center text-gray-800 mb-12">
+        <h2 className="text-lg md:text-xl sm:text-lg lg:text-lg xl:text-xl font-bold text-gray-800 mb-12">
           Our Services
         </h2>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white shadow-md rounded-lg overflow-hidden transition-transform duration-300 transform hover:scale-105"
+              className="shadow-md rounded-lg overflow-hidden transition-transform duration-300 transform hover:scale-105 flex flex-col"
             >
               {/* Service Image */}
-              <div className="w-full h-60 md:h-72 lg:h-80">
+              <div className="w-full h-60 md:h-72 lg:h-80 flex-shrink-0"> {/* Fixed height */}
                 <Image
                   src={service.imageUrl}
                   alt={service.title}
-                  width={500} // Specify width
-                  height={400} // Specify height
-                  className="w-full h-full object-cover"
+                  width={500}
+                  height={400}
+                  className="w-full h-full object-cover" // Maintain aspect ratio
                 />
               </div>
               {/* Service Writeup */}
-              <div className="p-4 flex flex-col items-center">
+              <div className="p-4 flex flex-col h-full">
                 <h3 className="text-base lg:text-lg xl:text-xl md:text-md sm:text-sm font-bold text-gray-800 mb-2 text-center">
                   {service.title}
                 </h3>
-                <p className="text-gray-600 text-center mb-4">{service.description}</p>
+                <p className="text-gray-600 text-center flex-grow">{service.description}</p>
 
-                {/* Centering the BOOK NOW Button */}
-                <Link href="/app/book">
-                  <button className="custom-btn">
-                    BOOK NOW
-                  </button>
-                </Link>
+                {/* Flex container to align button at the bottom */}
+                <div className="flex justify-center mt-4">
+                  <Link href="/app/book">
+                    <button className="custom-btn">
+                      BOOK NOW
+                    </button>
+                  </Link>
+                </div>
               </div>
             </div>
           ))}
+        </div>
+      </div>
+
+      {/* New Background Section */}
+      <div
+        className="relative flex items-center justify-center py-16"
+        style={{
+          backgroundImage: 'url("https://i.postimg.cc/85Jknmzr/goalimage.png")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="bg-opacity-70 p-8 rounded-lg text-center">
+          <h2 className="text-[50px] md:text-2xl font-bold text-white mb-4">
+            Schedule a Complimentary <br /> Consultation
+          </h2>
+          <p className="text-white text-[20px] mb-4">
+            Our experts are ready to provide personalized advice and recommendations tailored to your beauty needs.
+          </p>
+          <div className="flex justify-center">
+            <Link href="/app/book">
+              <button className="custom-btn hover:bg-gray-700 transition duration-300">
+                BOOK NOW
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
     </section>

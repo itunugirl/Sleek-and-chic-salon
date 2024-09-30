@@ -1,5 +1,5 @@
 /* Import fonts from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400;1,700&family=Oswald:wght@200;300;400;500;600;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Protest+Guerrilla&family=Sevillana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400;1,700&family=Edu+QLD+Beginner:wght@400..700&family=Oswald:wght@200;300;400;500;600;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Protest+Guerrilla&family=Sevillana&display=swap');
 
 /* Import Tailwind CSS directives */
 @tailwind base;
@@ -15,7 +15,7 @@
 
 /* Global Font Family */
 body {
-  font-family: 'Oswald', 'EB Garamond', 'Montserrat', 'Protest Guerrilla', 'Sevillana', sans-serif; /* Corrected font names */
+  font-family: 'Oswald', 'EB Garamond', 'Montserrat', 'Protest Guerrilla', 'Sevillana', 'Edu QLD Beginner', sans-serif; /* Corrected font names */
   min-height: 100vh;
   overflow: auto;
   position: relative;
@@ -44,4 +44,13 @@ main {
   .learnmore-btn {
     @apply bg-chocolate w-btn-wide text-white text-base py-3 px-4 flex items-center justify-center hover:bg-lightchocolate hover:text-white transition;
   }
+}/* Add this to your global CSS file */
+.loader {
+  animation: spin 1s linear infinite;
 }
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+

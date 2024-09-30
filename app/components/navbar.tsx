@@ -31,11 +31,14 @@ const Navbar: React.FC = () => {
 
         {/* Right side: Navigation Links */}
         <div className="hidden md:flex font-ebGaramond space-x-8 items-center justify-between">
-          <Link href="#shop" className="text-navText text-lg hover:text-blue-500 transition">
-            Shops
+          <Link href="/" className="text-navText text-lg hover:text-blue-500 transition">
+            Home
           </Link>
           <Link href="/about" className="text-navText text-lg hover:text-blue-500 transition">
             About
+          </Link>
+          <Link href="/products" className="text-navText text-lg hover:text-blue-500 transition">
+            Shops
           </Link>
           <Link href="/services" className="text-navText text-lg hover:text-blue-500 transition">
             Services
@@ -76,11 +79,14 @@ const Navbar: React.FC = () => {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden bg-stone-600 font-ebGaramond shadow-lg px-8">
-          <Link href="#shops" className="block px-4 py-2 text-navText hover:bg-gray-100 transition" onClick={toggleMenu}>
-            Shops
+          <Link href="/" className="block px-4 py-2 text-navText hover:bg-gray-100 transition" onClick={toggleMenu}>
+            Home
           </Link>
           <Link href="#about" className="block px-4 py-2 text-navText hover:bg-gray-100 transition" onClick={toggleMenu}>
             About
+          </Link>
+          <Link href="#products" className="block px-4 py-2 text-navText hover:bg-gray-100 transition" onClick={toggleMenu}>
+            Shops
           </Link>
           <Link href="#services" className="block px-4 py-2 text-navText hover:bg-gray-100 transition" onClick={toggleMenu}>
             Services
