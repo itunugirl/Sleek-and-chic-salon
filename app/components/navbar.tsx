@@ -82,13 +82,13 @@ const Navbar: React.FC = () => {
           <Link href="/" className="block px-4 py-2 text-navText hover:bg-gray-100 transition" onClick={toggleMenu}>
             Home
           </Link>
-          <Link href="#about" className="block px-4 py-2 text-navText hover:bg-gray-100 transition" onClick={toggleMenu}>
+          <Link href="/about" className="block px-4 py-2 text-navText hover:bg-gray-100 transition" onClick={toggleMenu}>
             About
           </Link>
-          <Link href="#products" className="block px-4 py-2 text-navText hover:bg-gray-100 transition" onClick={toggleMenu}>
+          <Link href="/products" className="block px-4 py-2 text-navText hover:bg-gray-100 transition" onClick={toggleMenu}>
             Shops
           </Link>
-          <Link href="#services" className="block px-4 py-2 text-navText hover:bg-gray-100 transition" onClick={toggleMenu}>
+          <Link href="/services" className="block px-4 py-2 text-navText hover:bg-gray-100 transition" onClick={toggleMenu}>
             Services
           </Link>
           <Link href="#contacts" className="block px-4 py-2 text-navText hover:bg-gray-100 transition" onClick={toggleMenu}>
